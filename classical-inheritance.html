@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Classical Inheritance</title>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+ 
+</head>
+<body>
+
+
+
+
+<script type="text/javascript">
+
+/** Prototype inheritance vs Classical inheritance **/
+
+function Person(name){
+    this.name = name;
+}
+
+Person.prototype.hiMethod = function(){
+    console.log('Hi ' + this.name);
+}
+
+var person = new Person('Shakir');
+
+</script>
+
+</body>
+</html>
