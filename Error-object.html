@@ -1,0 +1,35 @@
+<h2>Error objects in JS.</h2>
+
+<script>
+
+try{ x=y; }		// Using try catch
+
+ catch(e){ 
+ console.log(e); 
+ console.log("Number: "); 
+ console.log(e.number & 0XFFFF); 
+ console.log("Facility Code: "); 
+ console.log(e.number>>16 & 0x1FFF);
+ console.log("Description: "); 
+ console.log(e.description); 
+}
+</script>
+<h3> constructor property</h3>
+
+<script>
+	var x = new Error("This is an error");
+
+if (x.constructor == Error)
+    document.write("Object is an error.");
+
+</script>
+
+<h3>toString </h3>
+<script>
+	var myError = new Error();
+myError.message = "My Error";
+var errorString = myError.toString();
+document.write(errorString);
+
+// Output: Error: My Error
+</script>
