@@ -3,7 +3,7 @@
 <head>
 	<title>Classical Inheritance</title>
 
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
  
 </head>
 <body>
@@ -23,7 +23,32 @@ Person.prototype.hiMethod = function(){
     console.log('Hi ' + this.name);
 }
 
-var person = new Person('Shakir');
+
+var john = new Person('John');
+var victor = new Person('Victor');
+
+// Object inheritance function
+function Object(o){
+    function F(){};
+    F.prototype = o;
+
+    return new F()
+}
+
+victor = Object(john);
+
+console.log(victor.name) // John
+console.log(victor.hiMethod()) // Hi John
+
+
+console.log(john.name) // Victor
+console.log(john.hiMethod()) // Hi Victor
+
+
+
+
+
+
 
 </script>
 
