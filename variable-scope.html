@@ -1,0 +1,16 @@
+<h1>Scope in JS</h1>
+
+scope global and local
+<script type="text/javascript">
+var d = "a horse with a rider";		//Global Variable
+
+function apple (){
+	alert(d);		// Undefined , JS interprets it as hoisted on the top
+var d = "any thing it will not print."; //Local variable
+alert(d);		// This will give Local variable as intialisation done
+}
+apple(); 
+alert(d); // gives out global variable
+</script>
+		
+		<h2>Now you can play with variables.. Cheers</h2>
