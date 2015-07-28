@@ -1,0 +1,21 @@
+
+<h2>Getter & Setter</h2>
+
+<script>
+var person = {
+    firstName: 'Dani',
+    lastName: 'Smith',
+    get fullName() {            //Getting data from object person
+        return this.firstName + ' ' + this.lastName;
+            },
+    set fullName (name) {                   //Setting Values
+        var words = name.toString().split(' ');       //defined for split string into words
+        this.firstName = words[0] || '';    
+        this.lastName = words[1] || '';
+    }
+}
+
+person.fullName = 'Jack Arora';
+console.log(person.firstName); // Jack
+console.log(person.lastName) // Arora
+</script>
